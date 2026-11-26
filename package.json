@@ -1,0 +1,21 @@
+{
+  "name": "tumbuhai-netlify",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "netlify dev",
+    "check": "node --check app.js && node --check netlify/functions/auth-username-login.mjs && node --check netlify/functions/social-auth-start.mjs && node --check netlify/functions/social-auth-callback.mjs && node --check netlify/functions/social-connections.mjs && node --check netlify/functions/ai-generate.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
+    "openai": "^7.64.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^27.20.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
